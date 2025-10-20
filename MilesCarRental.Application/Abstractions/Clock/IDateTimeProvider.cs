@@ -1,4 +1,4 @@
-﻿namespace CleanArchitecture.Application.Abstractions.Clock;
+﻿namespace MilesCarRental.Application.Abstractions.Clock;
 
 public class IDateTimeProvider
 {

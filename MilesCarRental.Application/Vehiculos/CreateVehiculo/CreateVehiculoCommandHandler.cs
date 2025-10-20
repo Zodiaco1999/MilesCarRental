@@ -1,9 +1,9 @@
-﻿using CleanArchitecture.Application.Abstractions.Messaging;
-using CleanArchitecture.Application.Exceptions;
-using CleanArchitecture.Domain.Abstractions;
-using CleanArchitecture.Domain.Vehiculos;
+﻿using MilesCarRental.Application.Abstractions.Messaging;
+using MilesCarRental.Application.Exceptions;
+using MilesCarRental.Domain.Abstractions;
+using MilesCarRental.Domain.Vehiculos;
 
-namespace CleanArchitecture.Application.Vehiculos.CreateVehiculo;
+namespace MilesCarRental.Application.Vehiculos.CreateVehiculo;
 
 internal sealed class CreateVehiculoCommandHandler : ICommandHandler<CreateVehiculoCommand, Guid>
 {

@@ -1,4 +1,4 @@
-﻿namespace CleanArchitecture.Domain.Alquileres;
+﻿namespace MilesCarRental.Domain.Alquileres;
 
 public sealed record DateRange
 {

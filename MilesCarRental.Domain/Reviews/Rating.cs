@@ -1,7 +1,7 @@
-﻿using CleanArchitecture.Domain.Abstractions;
+﻿using MilesCarRental.Domain.Abstractions;
 using Microsoft.VisualBasic;
 
-namespace CleanArchitecture.Domain.Reviews;
+namespace MilesCarRental.Domain.Reviews;
 
 public sealed record Rating
 {

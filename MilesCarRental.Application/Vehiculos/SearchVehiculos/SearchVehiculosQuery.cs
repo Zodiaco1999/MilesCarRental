@@ -1,6 +1,6 @@
-﻿using CleanArchitecture.Application.Abstractions.Messaging;
+﻿using MilesCarRental.Application.Abstractions.Messaging;
 
-namespace CleanArchitecture.Application.Vehiculos.SearchVehiculos;
+namespace MilesCarRental.Application.Vehiculos.SearchVehiculos;
 
 public record SearchVehiculosQuery(
     DateOnly FechaInicio,

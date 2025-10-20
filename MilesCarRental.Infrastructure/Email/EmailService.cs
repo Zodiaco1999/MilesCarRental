@@ -1,6 +1,6 @@
-﻿using CleanArchitecture.Application.Abstractions.Email;
+﻿using MilesCarRental.Application.Abstractions.Email;
 
-namespace CleanArchitecture.Infraestructure.Email;
+namespace MilesCarRental.Infrastructure.Email;
 
 internal sealed class EmailService : IEmailService
 {

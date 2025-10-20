@@ -1,3 +1,3 @@
-﻿namespace CleanArchitecture.Domain.Users;
+﻿namespace MilesCarRental.Domain.Users;
 
 public record Nombre(string Value);

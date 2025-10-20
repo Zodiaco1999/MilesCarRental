@@ -1,4 +1,4 @@
-﻿namespace CleanArchitecture.Application.Vehiculos.SearchVehiculos;
+﻿namespace MilesCarRental.Application.Vehiculos.SearchVehiculos;
 
 public sealed class DireccionResponse
 {

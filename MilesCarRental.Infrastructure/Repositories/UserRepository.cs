@@ -1,6 +1,6 @@
-using CleanArchitecture.Domain.Users;
+using MilesCarRental.Domain.Users;
 
-namespace CleanArchitecture.Infraestructure.Repositories;
+namespace MilesCarRental.Infrastructure.Repositories;
 
 internal sealed class UserRepository : Repository<User>, IUserRepository
 {

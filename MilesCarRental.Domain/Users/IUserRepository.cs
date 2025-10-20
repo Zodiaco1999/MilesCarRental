@@ -1,4 +1,4 @@
-﻿namespace CleanArchitecture.Domain.Users;
+﻿namespace MilesCarRental.Domain.Users;
 
 public interface IUserRepository
 {

@@ -19,7 +19,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CleanArchitecture.Application\MilesCarRental.Application.csproj" />
+    <ProjectReference Include="..\MilesCarRental.Application\MilesCarRental.Application.csproj" />
+    <ProjectReference Include="..\MilesCarRental.Domain\MilesCarRental.Domain.csproj" />
   </ItemGroup>
 
 </Project>

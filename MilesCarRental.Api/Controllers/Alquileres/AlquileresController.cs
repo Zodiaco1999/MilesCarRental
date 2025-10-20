@@ -1,5 +1,5 @@
-﻿using CleanArchitecture.Application.Alquileres.GetAlquiler;
-using CleanArchitecture.Application.Alquileres.ReservarAlquiler;
+﻿using MilesCarRental.Application.Alquileres.GetAlquiler;
+using MilesCarRental.Application.Alquileres.ReservarAlquiler;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 

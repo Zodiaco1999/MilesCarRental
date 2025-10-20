@@ -1,4 +1,4 @@
-﻿using CleanArchitecture.Infraestructure;
+﻿using MilesCarRental.Infrastructure;
 using CleanArquitecture.Api.Middleware;
 using Microsoft.EntityFrameworkCore;
 

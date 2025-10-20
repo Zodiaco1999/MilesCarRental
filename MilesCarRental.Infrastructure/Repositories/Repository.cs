@@ -1,7 +1,7 @@
-using CleanArchitecture.Domain.Abstractions;
+using MilesCarRental.Domain.Abstractions;
 using Microsoft.EntityFrameworkCore;
 
-namespace CleanArchitecture.Infraestructure.Repositories;
+namespace MilesCarRental.Infrastructure.Repositories;
 
 
 internal abstract class Repository<T>

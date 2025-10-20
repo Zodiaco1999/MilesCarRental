@@ -1,8 +1,8 @@
-using CleanArchitecture.Domain.Alquileres;
-using CleanArchitecture.Domain.Vehiculos;
+using MilesCarRental.Domain.Alquileres;
+using MilesCarRental.Domain.Vehiculos;
 using Microsoft.EntityFrameworkCore;
 
-namespace CleanArchitecture.Infraestructure.Repositories;
+namespace MilesCarRental.Infrastructure.Repositories;
 
 internal sealed class AlquilerRepository : Repository<Alquiler>, IAlquilerRepository
 {

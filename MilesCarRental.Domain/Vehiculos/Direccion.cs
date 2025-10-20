@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CleanArchitecture.Domain.Vehiculos;
+namespace MilesCarRental.Domain.Vehiculos;
 
 public record Direccion(
     string Pais,

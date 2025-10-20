@@ -1,8 +1,8 @@
-﻿using CleanArchitecture.Application.Abstractions.Messaging;
+﻿using MilesCarRental.Application.Abstractions.Messaging;
 using MediatR;
 using Microsoft.Extensions.Logging;
 
-namespace CleanArchitecture.Application.Abstractions.Behaviors;
+namespace MilesCarRental.Application.Abstractions.Behaviors;
 
 public class LoggingBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse> where TRequest : IBaseCommand
 {

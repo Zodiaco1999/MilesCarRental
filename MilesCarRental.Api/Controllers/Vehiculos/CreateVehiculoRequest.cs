@@ -1,5 +1,5 @@
-﻿using CleanArchitecture.Domain.Shared;
-using CleanArchitecture.Domain.Vehiculos;
+﻿using MilesCarRental.Domain.Shared;
+using MilesCarRental.Domain.Vehiculos;
 
 namespace CleanArquitecture.Api.Controllers.Vehiculos;
 

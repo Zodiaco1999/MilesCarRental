@@ -1,6 +1,6 @@
-﻿using CleanArchitecture.Domain.Abstractions;
+﻿using MilesCarRental.Domain.Abstractions;
 
-namespace CleanArchitecture.Domain.Users;
+namespace MilesCarRental.Domain.Users;
 
 public static class UserErrors
 {

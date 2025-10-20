@@ -1,10 +1,10 @@
-﻿using CleanArchitecture.Application.Abstractions.Email;
-using CleanArchitecture.Domain.Alquileres;
-using CleanArchitecture.Domain.Alquileres.Events;
-using CleanArchitecture.Domain.Users;
+﻿using MilesCarRental.Application.Abstractions.Email;
+using MilesCarRental.Domain.Alquileres;
+using MilesCarRental.Domain.Alquileres.Events;
+using MilesCarRental.Domain.Users;
 using MediatR;
 
-namespace CleanArchitecture.Application.Alquileres.ReservarAlquiler;
+namespace MilesCarRental.Application.Alquileres.ReservarAlquiler;
 
 internal sealed class ReservarAlquilerDomainEventHandler : INotificationHandler<AlquilerReservadoDomainEvent>
 {

@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
 
-namespace CleanArchitecture.Application.Alquileres.ReservarAlquiler;
+namespace MilesCarRental.Application.Alquileres.ReservarAlquiler;
 
 public class ReservarAlquilerCommandValidator : AbstractValidator<ReservarAlquilerCommand>
 {

@@ -1,6 +1,6 @@
-﻿using CleanArchitecture.Domain.Abstractions;
+﻿using MilesCarRental.Domain.Abstractions;
 
-namespace CleanArchitecture.Domain.Reviews;
+namespace MilesCarRental.Domain.Reviews;
 
 public static class ReviewErrors
 {

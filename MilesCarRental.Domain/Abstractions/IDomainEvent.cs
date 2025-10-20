@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace CleanArchitecture.Domain.Abstractions;
+namespace MilesCarRental.Domain.Abstractions;
 
 public interface IDomainEvent : INotification
 {

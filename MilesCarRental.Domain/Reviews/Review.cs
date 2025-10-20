@@ -1,8 +1,8 @@
-﻿using CleanArchitecture.Domain.Abstractions;
-using CleanArchitecture.Domain.Alquileres;
-using CleanArchitecture.Domain.Reviews.Events;
+﻿using MilesCarRental.Domain.Abstractions;
+using MilesCarRental.Domain.Alquileres;
+using MilesCarRental.Domain.Reviews.Events;
 
-namespace CleanArchitecture.Domain.Reviews;
+namespace MilesCarRental.Domain.Reviews;
 
 public sealed class Review : Entity
 {

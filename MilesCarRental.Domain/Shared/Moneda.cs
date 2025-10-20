@@ -1,4 +1,4 @@
-﻿namespace CleanArchitecture.Domain.Shared;
+﻿namespace MilesCarRental.Domain.Shared;
 
 public record Moneda(decimal Monto, TipoMoneda TipoMoneda)
 {

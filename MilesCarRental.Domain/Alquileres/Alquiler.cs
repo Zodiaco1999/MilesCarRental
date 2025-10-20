@@ -1,9 +1,9 @@
-﻿using CleanArchitecture.Domain.Abstractions;
-using CleanArchitecture.Domain.Alquileres.Events;
-using CleanArchitecture.Domain.Shared;
-using CleanArchitecture.Domain.Vehiculos;
+﻿using MilesCarRental.Domain.Abstractions;
+using MilesCarRental.Domain.Alquileres.Events;
+using MilesCarRental.Domain.Shared;
+using MilesCarRental.Domain.Vehiculos;
 
-namespace CleanArchitecture.Domain.Alquileres;
+namespace MilesCarRental.Domain.Alquileres;
 
 public sealed class Alquiler : Entity
 {

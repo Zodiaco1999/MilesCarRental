@@ -1,6 +1,6 @@
-﻿using CleanArchitecture.Domain.Abstractions;
+﻿using MilesCarRental.Domain.Abstractions;
 
-namespace CleanArchitecture.Domain.Vehiculos;
+namespace MilesCarRental.Domain.Vehiculos;
 
 public static class VehiculoErrors
 {

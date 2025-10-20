@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
 
-namespace CleanArchitecture.Application.Vehiculos.CreateVehiculo;
+namespace MilesCarRental.Application.Vehiculos.CreateVehiculo;
 
 public class CreateVehiculoCommandValidator : AbstractValidator<CreateVehiculoCommand>
 {

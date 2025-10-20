@@ -1,8 +1,8 @@
 using System.Data;
-using CleanArchitecture.Application.Abstractions.Data;
+using MilesCarRental.Application.Abstractions.Data;
 using Npgsql;
 
-namespace CleanArchitecture.Infraestructure.Data;
+namespace MilesCarRental.Infrastructure.Data;
 
 internal sealed class SqlConnectionFactory : ISqlConnectionFactory
 {

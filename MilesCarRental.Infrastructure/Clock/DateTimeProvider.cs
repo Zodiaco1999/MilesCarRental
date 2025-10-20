@@ -1,6 +1,6 @@
-﻿using CleanArchitecture.Application.Abstractions.Clock;
+﻿using MilesCarRental.Application.Abstractions.Clock;
 
-namespace CleanArchitecture.Infraestructure.Clock;
+namespace MilesCarRental.Infrastructure.Clock;
 
 internal sealed class DateTimeProvider : IDateTimeProvider
 {

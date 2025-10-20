@@ -1,5 +1,5 @@
-﻿using CleanArchitecture.Domain.Abstractions;
+﻿using MilesCarRental.Domain.Abstractions;
 
-namespace CleanArchitecture.Domain.Alquileres.Events;
+namespace MilesCarRental.Domain.Alquileres.Events;
 
 public sealed record AlquilerReservadoDomainEvent(Guid AlquilerId) : IDomainEvent;

@@ -1,9 +1,9 @@
-﻿using CleanArchitecture.Application.Vehiculos.CreateVehiculo;
-using CleanArchitecture.Application.Vehiculos.SearchVehiculos;
+﻿using MilesCarRental.Application.Vehiculos.CreateVehiculo;
+using MilesCarRental.Application.Vehiculos.SearchVehiculos;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using CleanArchitecture.Domain.Vehiculos;
-using CleanArchitecture.Domain.Shared;
+using MilesCarRental.Domain.Vehiculos;
+using MilesCarRental.Domain.Shared;
 
 
 namespace CleanArquitecture.Api.Controllers.Vehiculos;

@@ -1,11 +1,11 @@
-using CleanArchitecture.Domain.Alquileres;
-using CleanArchitecture.Domain.Shared;
-using CleanArchitecture.Domain.Users;
-using CleanArchitecture.Domain.Vehiculos;
+using MilesCarRental.Domain.Alquileres;
+using MilesCarRental.Domain.Shared;
+using MilesCarRental.Domain.Users;
+using MilesCarRental.Domain.Vehiculos;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace CleanArchitecture.Infraestructure.Configurations;
+namespace MilesCarRental.Infrastructure.Configurations;
 
 internal sealed class AlquilerConfiguration : IEntityTypeConfiguration<Alquiler>
 {

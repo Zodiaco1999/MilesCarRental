@@ -1,10 +1,10 @@
-﻿using CleanArchitecture.Application.Abstractions.Data;
-using CleanArchitecture.Application.Abstractions.Messaging;
-using CleanArchitecture.Domain.Abstractions;
-using CleanArchitecture.Domain.Alquileres;
+﻿using MilesCarRental.Application.Abstractions.Data;
+using MilesCarRental.Application.Abstractions.Messaging;
+using MilesCarRental.Domain.Abstractions;
+using MilesCarRental.Domain.Alquileres;
 using Dapper;
 
-namespace CleanArchitecture.Application.Alquileres.GetAlquiler;
+namespace MilesCarRental.Application.Alquileres.GetAlquiler;
 
 internal sealed class GetAlquilerQueryHandler : IQueryHandler<GetAlquilerQuery, AlquilerResponse>
 {

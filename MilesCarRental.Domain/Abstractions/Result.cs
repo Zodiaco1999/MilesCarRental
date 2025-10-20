@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 
-namespace CleanArchitecture.Domain.Abstractions;
+namespace MilesCarRental.Domain.Abstractions;
 
 public class Result 
 {

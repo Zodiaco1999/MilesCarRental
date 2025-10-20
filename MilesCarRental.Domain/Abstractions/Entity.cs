@@ -1,4 +1,4 @@
-﻿namespace CleanArchitecture.Domain.Abstractions;
+﻿namespace MilesCarRental.Domain.Abstractions;
 
 public abstract class Entity
 {

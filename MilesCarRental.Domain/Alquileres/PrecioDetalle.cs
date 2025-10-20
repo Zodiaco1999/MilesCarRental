@@ -1,6 +1,6 @@
-﻿using CleanArchitecture.Domain.Shared;
+﻿using MilesCarRental.Domain.Shared;
 
-namespace CleanArchitecture.Domain.Alquileres;
+namespace MilesCarRental.Domain.Alquileres;
 
 public record PrecioDetalle(
     Moneda PrecioPorPeriodo,

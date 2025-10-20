@@ -1,4 +1,4 @@
-﻿namespace CleanArchitecture.Application.Exceptions;
+﻿namespace MilesCarRental.Application.Exceptions;
 
 public sealed class ValidationException : Exception
 {

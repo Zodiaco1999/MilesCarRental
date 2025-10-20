@@ -1,4 +1,4 @@
-﻿namespace CleanArchitecture.Application.Abstractions.Email;
+﻿namespace MilesCarRental.Application.Abstractions.Email;
 
 public interface IEmailService
 {

@@ -1,6 +1,6 @@
 ﻿using System.Data;
 
-namespace CleanArchitecture.Application.Abstractions.Data;
+namespace MilesCarRental.Application.Abstractions.Data;
 
 public interface ISqlConnectionFactory
 {

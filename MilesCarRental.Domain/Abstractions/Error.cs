@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics.Tracing;
 
-namespace CleanArchitecture.Domain.Abstractions;
+namespace MilesCarRental.Domain.Abstractions;
 
 public record Error(string Code, string Name)
 {

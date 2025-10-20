@@ -1,5 +1,5 @@
-﻿using CleanArchitecture.Application.Abstractions.Messaging;
+﻿using MilesCarRental.Application.Abstractions.Messaging;
 
-namespace CleanArchitecture.Application.Alquileres.GetAlquiler;
+namespace MilesCarRental.Application.Alquileres.GetAlquiler;
 
 public sealed record GetAlquilerQuery(Guid AlquilerId) : IQuery<AlquilerResponse>;

@@ -1,4 +1,4 @@
-﻿namespace CleanArchitecture.Application.Alquileres.GetAlquiler;
+﻿namespace MilesCarRental.Application.Alquileres.GetAlquiler;
 
 public sealed class AlquilerResponse
 {

@@ -1,9 +1,9 @@
-﻿using CleanArchitecture.Application.Abstractions.Messaging;
-using CleanArchitecture.Application.Exceptions;
+﻿using MilesCarRental.Application.Abstractions.Messaging;
+using MilesCarRental.Application.Exceptions;
 using FluentValidation;
 using MediatR;
 
-namespace CleanArchitecture.Application.Abstractions.Behaviors;
+namespace MilesCarRental.Application.Abstractions.Behaviors;
 
 public class ValidationBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
     where TRequest : IBaseCommand

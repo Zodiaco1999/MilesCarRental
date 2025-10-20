@@ -1,9 +1,9 @@
-using CleanArchitecture.Domain.Shared;
-using CleanArchitecture.Domain.Vehiculos;
+using MilesCarRental.Domain.Shared;
+using MilesCarRental.Domain.Vehiculos;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace CleanArchitecture.Infraestructure.Configurations;
+namespace MilesCarRental.Infrastructure.Configurations;
 
 internal sealed class VehiculoConfiguration : IEntityTypeConfiguration<Vehiculo>
 {

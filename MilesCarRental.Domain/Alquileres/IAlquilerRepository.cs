@@ -1,6 +1,6 @@
-﻿using CleanArchitecture.Domain.Vehiculos;
+﻿using MilesCarRental.Domain.Vehiculos;
 
-namespace CleanArchitecture.Domain.Alquileres;
+namespace MilesCarRental.Domain.Alquileres;
 
 public interface IAlquilerRepository
 {

@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MilesCarRental.Domain", "Mi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MilesCarRental.Application", "MilesCarRental.Application\MilesCarRental.Application.csproj", "{F7FDC4B4-EE3E-433F-97AE-6A1B21AB4DE6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MilesCarRental.Infrastructure", "MilesCarRental.Infraestructure\MilesCarRental.Infrastructure.csproj", "{93933B2B-2DFD-4718-8200-5E8C23BC84E4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MilesCarRental.Infrastructure", "MilesCarRental.Infrastructure\MilesCarRental.Infrastructure.csproj", "{93933B2B-2DFD-4718-8200-5E8C23BC84E4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MilesCarRental.Api", "MilesCarRental.Api\MilesCarRental.Api.csproj", "{00898EFF-10B6-4BE9-BF1F-7468255442D3}"
 EndProject

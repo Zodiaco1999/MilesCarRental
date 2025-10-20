@@ -1,7 +1,7 @@
-﻿using CleanArchitecture.Domain.Abstractions;
-using CleanArchitecture.Domain.Shared;
+﻿using MilesCarRental.Domain.Abstractions;
+using MilesCarRental.Domain.Shared;
 
-namespace CleanArchitecture.Domain.Vehiculos;
+namespace MilesCarRental.Domain.Vehiculos;
 
 public sealed class Vehiculo : Entity
 {

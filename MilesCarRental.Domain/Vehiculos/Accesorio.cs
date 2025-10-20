@@ -1,4 +1,4 @@
-﻿namespace CleanArchitecture.Domain.Vehiculos;
+﻿namespace MilesCarRental.Domain.Vehiculos;
 
 public enum Accesorio
 {

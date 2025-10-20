@@ -1,7 +1,7 @@
-﻿using CleanArchitecture.Domain.Abstractions;
+﻿using MilesCarRental.Domain.Abstractions;
 using MediatR;
 
-namespace CleanArchitecture.Application.Abstractions.Messaging;
+namespace MilesCarRental.Application.Abstractions.Messaging;
 
 public interface ICommandHandler<TCommand> : IRequestHandler<TCommand, Result>
     where TCommand : ICommand

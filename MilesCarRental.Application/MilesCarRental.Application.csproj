@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CleanArchitecture.Domain\MilesCarRental.Domain.csproj" />
+    <ProjectReference Include="..\MilesCarRental.Domain\MilesCarRental.Domain.csproj" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,6 +1,6 @@
 ﻿using Bogus;
-using CleanArchitecture.Application.Abstractions.Data;
-using CleanArchitecture.Domain.Vehiculos;
+using MilesCarRental.Application.Abstractions.Data;
+using MilesCarRental.Domain.Vehiculos;
 using Dapper;
 
 namespace CleanArquitecture.Api.Extensions;

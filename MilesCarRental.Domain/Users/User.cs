@@ -1,7 +1,7 @@
-﻿using CleanArchitecture.Domain.Abstractions;
-using CleanArchitecture.Domain.Users.Events;
+﻿using MilesCarRental.Domain.Abstractions;
+using MilesCarRental.Domain.Users.Events;
 
-namespace CleanArchitecture.Domain.Users;
+namespace MilesCarRental.Domain.Users;
 
 public sealed class User : Entity
 {

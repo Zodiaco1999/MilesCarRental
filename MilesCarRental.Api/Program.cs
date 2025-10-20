@@ -1,5 +1,5 @@
-using CleanArchitecture.Application;
-using CleanArchitecture.Infraestructure;
+using MilesCarRental.Application;
+using MilesCarRental.Infrastructure;
 using CleanArquitecture.Api.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);

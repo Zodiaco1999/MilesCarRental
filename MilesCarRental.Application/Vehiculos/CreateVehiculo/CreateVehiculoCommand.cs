@@ -1,8 +1,8 @@
-﻿using CleanArchitecture.Domain.Shared;
-using CleanArchitecture.Domain.Vehiculos;
-using CleanArchitecture.Application.Abstractions.Messaging;
+﻿using MilesCarRental.Domain.Shared;
+using MilesCarRental.Domain.Vehiculos;
+using MilesCarRental.Application.Abstractions.Messaging;
 
-namespace CleanArchitecture.Application.Vehiculos.CreateVehiculo;
+namespace MilesCarRental.Application.Vehiculos.CreateVehiculo;
 
 public record CreateVehiculoCommand(
     Modelo? Modelo,

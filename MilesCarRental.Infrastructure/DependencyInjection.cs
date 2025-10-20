@@ -1,20 +1,20 @@
-﻿using CleanArchitecture.Application.Abstractions.Clock;
-using CleanArchitecture.Application.Abstractions.Data;
-using CleanArchitecture.Application.Abstractions.Email;
-using CleanArchitecture.Domain.Abstractions;
-using CleanArchitecture.Domain.Alquileres;
-using CleanArchitecture.Domain.Users;
-using CleanArchitecture.Domain.Vehiculos;
-using CleanArchitecture.Infraestructure.Clock;
-using CleanArchitecture.Infraestructure.Data;
-using CleanArchitecture.Infraestructure.Email;
-using CleanArchitecture.Infraestructure.Repositories;
+﻿using MilesCarRental.Application.Abstractions.Clock;
+using MilesCarRental.Application.Abstractions.Data;
+using MilesCarRental.Application.Abstractions.Email;
+using MilesCarRental.Domain.Abstractions;
+using MilesCarRental.Domain.Alquileres;
+using MilesCarRental.Domain.Users;
+using MilesCarRental.Domain.Vehiculos;
+using MilesCarRental.Infrastructure.Clock;
+using MilesCarRental.Infrastructure.Data;
+using MilesCarRental.Infrastructure.Email;
+using MilesCarRental.Infrastructure.Repositories;
 using Dapper;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace CleanArchitecture.Infraestructure;
+namespace MilesCarRental.Infrastructure;
 
 public static class DependencyInjection
 {

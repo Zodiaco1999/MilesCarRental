@@ -1,13 +1,13 @@
-﻿using CleanArchitecture.Application.Abstractions.Clock;
-using CleanArchitecture.Application.Abstractions.Messaging;
-using CleanArchitecture.Application.Exceptions;
-using CleanArchitecture.Domain.Abstractions;
-using CleanArchitecture.Domain.Alquileres;
-using CleanArchitecture.Domain.Users;
-using CleanArchitecture.Domain.Vehiculos;
+﻿using MilesCarRental.Application.Abstractions.Clock;
+using MilesCarRental.Application.Abstractions.Messaging;
+using MilesCarRental.Application.Exceptions;
+using MilesCarRental.Domain.Abstractions;
+using MilesCarRental.Domain.Alquileres;
+using MilesCarRental.Domain.Users;
+using MilesCarRental.Domain.Vehiculos;
 using System.Diagnostics.Contracts;
 
-namespace CleanArchitecture.Application.Alquileres.ReservarAlquiler;
+namespace MilesCarRental.Application.Alquileres.ReservarAlquiler;
 
 internal sealed class ReservarAlquilerCommandHandler : ICommandHandler<ReservarAlquilerCommand, Guid>
 {

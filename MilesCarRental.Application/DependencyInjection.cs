@@ -1,9 +1,9 @@
-﻿using CleanArchitecture.Application.Abstractions.Behaviors;
-using CleanArchitecture.Domain.Alquileres;
+﻿using MilesCarRental.Application.Abstractions.Behaviors;
+using MilesCarRental.Domain.Alquileres;
 using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace CleanArchitecture.Application;
+namespace MilesCarRental.Application;
 
 public static class DependencyInjection
 {

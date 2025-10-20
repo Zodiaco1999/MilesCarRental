@@ -1,9 +1,9 @@
-﻿using CleanArchitecture.Application.Exceptions;
-using CleanArchitecture.Domain.Abstractions;
+﻿using MilesCarRental.Application.Exceptions;
+using MilesCarRental.Domain.Abstractions;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
                                                     
-namespace CleanArchitecture.Infraestructure;
+namespace MilesCarRental.Infrastructure;
 
 public class ApplicationDbContext : DbContext, IUnitOfWork
 {

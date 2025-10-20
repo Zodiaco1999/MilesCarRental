@@ -1,7 +1,7 @@
 using System.Data;
 using Dapper;
 
-namespace CleanArchitecture.Infraestructure.Data;
+namespace MilesCarRental.Infrastructure.Data;
 
 
 internal sealed class DateOnlyTypeHandler : SqlMapper.TypeHandler<DateOnly>
