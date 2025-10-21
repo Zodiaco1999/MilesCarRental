@@ -1,9 +1,10 @@
-﻿using MilesCarRental.Application.Vehiculos.CreateVehiculo;
-using MilesCarRental.Application.Vehiculos.SearchVehiculos;
-using MediatR;
+﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using MilesCarRental.Domain.Vehiculos;
+using MilesCarRental.Application.Vehiculos.CreateVehiculo;
+using MilesCarRental.Application.Vehiculos.GetVehiculosDisponibles;
+using MilesCarRental.Application.Vehiculos.SearchVehiculos;
 using MilesCarRental.Domain.Shared;
+using MilesCarRental.Domain.Vehiculos;
 
 
 namespace CleanArquitecture.Api.Controllers.Vehiculos;
@@ -30,10 +31,9 @@ public class VehiculosController : ControllerBase
         var vehiculo = new CreateVehiculoCommand(
             new Modelo(request.Modelo),
             new Vin(request.Vin),
-            new Direccion(request.Pais, request.Departamento, request.Provincia, request.Ciudad, request.Calle),
+            request.LocalidadId,
             new Moneda(request.PrecioMonto, TipoMoneda.FromCodigo(request.PrecioTipoMoneda)),
             new Moneda(request.MantenimientoMonto, TipoMoneda.FromCodigo(request.MantenimientoTipoMoneda)),
-            null,
             request.Accesorios
         );
 
@@ -42,6 +42,15 @@ public class VehiculosController : ControllerBase
         return Ok(result.Value);
     }
 
+    [HttpGet("disponibles")]
+    public async Task<IActionResult> GetVehiculosDisponiblesPorLocalidad([FromQuery] GetVehiculosDisponiblesQuery query, CancellationToken cancellationToken)
+    {
+        var result = await _sender.Send(query, cancellationToken);
+        if (result.IsFailure)
+        {
+            return BadRequest(result.Error);
+        }
 
-
+        return Ok(result.Value);
+    }
 }

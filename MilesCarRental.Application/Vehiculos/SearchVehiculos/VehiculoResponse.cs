@@ -7,5 +7,4 @@ public sealed class VehiculoResponse
     public string? Vin { get; init; }
     public decimal Precio { get; init; }
     public string? TipoMoneda { get; init; }
-    public DireccionResponse? Direccion { get; set; }
 }

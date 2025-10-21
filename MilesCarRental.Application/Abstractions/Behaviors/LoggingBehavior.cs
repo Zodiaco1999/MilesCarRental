@@ -1,6 +1,6 @@
-﻿using MilesCarRental.Application.Abstractions.Messaging;
-using MediatR;
+﻿using MediatR;
 using Microsoft.Extensions.Logging;
+using MilesCarRental.Application.Abstractions.Messaging;
 
 namespace MilesCarRental.Application.Abstractions.Behaviors;
 

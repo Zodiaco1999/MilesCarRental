@@ -1,16 +1,11 @@
-﻿using MilesCarRental.Domain.Shared;
-using MilesCarRental.Domain.Vehiculos;
+﻿using MilesCarRental.Domain.Vehiculos;
 
 namespace CleanArquitecture.Api.Controllers.Vehiculos;
 
-public record CreateVehiculoRequest(   
+public record CreateVehiculoRequest(
     string Modelo,
     string Vin,
-    string Pais,
-    string Departamento,
-    string Provincia,
-    string Ciudad,
-    string Calle,
+    Guid LocalidadId,
     decimal PrecioMonto,
     string PrecioTipoMoneda,
     decimal MantenimientoMonto,

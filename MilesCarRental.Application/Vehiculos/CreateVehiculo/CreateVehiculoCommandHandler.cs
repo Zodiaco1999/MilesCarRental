@@ -1,5 +1,4 @@
 ﻿using MilesCarRental.Application.Abstractions.Messaging;
-using MilesCarRental.Application.Exceptions;
 using MilesCarRental.Domain.Abstractions;
 using MilesCarRental.Domain.Vehiculos;
 
@@ -21,8 +20,8 @@ internal sealed class CreateVehiculoCommandHandler : ICommandHandler<CreateVehic
         var vehiculo = new Vehiculo(
             Guid.NewGuid(),
             request.Modelo!,
-            request.Direccion!,
             request.Vin!,
+            request.LocalidadId,
             request.Precio,
             request.Mantenimiento,
             DateTime.UtcNow,
@@ -30,7 +29,7 @@ internal sealed class CreateVehiculoCommandHandler : ICommandHandler<CreateVehic
 
         _vehiculoRepository.Add(vehiculo);
         await _unitOfWork.SaveChangesAsync(cancellationToken);
-        
+
         return Result.Success(vehiculo.Id);
     }
 }

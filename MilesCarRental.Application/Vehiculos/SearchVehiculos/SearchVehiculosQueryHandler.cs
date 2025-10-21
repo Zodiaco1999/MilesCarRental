@@ -30,12 +30,7 @@ internal class SearchVehiculosQueryHandler : IQueryHandler<SearchVehiculosQuery,
               a.modelo AS Modelo,
               a.vin AS Vin,
               a.precio_monto AS Precio,
-              a.precio_tipo_moneda AS TipoMoneda,
-              a.direccion_pais AS Pais,
-              a.direccion_departamento AS Departamento,
-              a.direccion_provincia AS Provincia,
-              a.direccion_ciudad AS Ciudad,
-              a.direccion_calle AS Calle
+              a.precio_tipo_moneda AS TipoMoneda
          FROM vehiculos AS a
          WHERE NOT EXISTS (
              SELECT 1
@@ -48,19 +43,14 @@ internal class SearchVehiculosQueryHandler : IQueryHandler<SearchVehiculosQuery,
          )
          """;
         var vehiculos = await connection
-            .QueryAsync<VehiculoResponse, DireccionResponse, VehiculoResponse>(
-                sql, 
-                (vehiculo, direccion) => {
-                    vehiculo.Direccion = direccion;
-                    return vehiculo;
-                },
+            .QueryAsync<VehiculoResponse>(
+                sql,
                 new
                 {
                     StartDate = request.FechaInicio,
                     EndDate = request.FechaFin,
                     ActiveAlquilerStatuses
-                },
-                splitOn: "Pais"
+                }
             );
 
         return vehiculos.ToList();

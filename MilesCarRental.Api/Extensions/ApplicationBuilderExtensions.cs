@@ -1,6 +1,8 @@
-﻿using MilesCarRental.Infrastructure;
-using CleanArquitecture.Api.Middleware;
+﻿using CleanArquitecture.Api.Middleware;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Storage;
+using MilesCarRental.Infrastructure;
 
 namespace CleanArquitecture.Api.Extensions;
 
@@ -16,7 +18,14 @@ public static class ApplicationBuilderExtensions
             try
             {
                 var context = service.GetRequiredService<ApplicationDbContext>();
-                if (!await context.Database.CanConnectAsync())
+                var dbCreator = context.Database.GetService<IRelationalDatabaseCreator>();
+
+                if (dbCreator.Exists())
+                {
+                    var logger = loggerFactory.CreateLogger("ApplyMigration");
+                    logger.LogInformation("Database already exists. Skipping migrations.");
+                }
+                else
                 {
                     await context.Database.MigrateAsync();
                 }
