@@ -5,7 +5,7 @@ namespace MilesCarRental.Application.Vehiculos.GetVehiculosDisponibles;
 public record GetVehiculosDisponiblesQuery(
     Guid LocalidadRecogidaId,
     Guid? LocalidadDevolucionId,
-    Guid? MercadoId,
+    Guid? LocalidadClienteId,
     DateOnly? FechaInicio,
     DateOnly? FechaFin
 ) : IQuery<IReadOnlyList<VehiculoDisponibleResponse>>;

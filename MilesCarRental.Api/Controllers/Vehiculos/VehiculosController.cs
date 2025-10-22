@@ -1,5 +1,6 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using MilesCarRental.Api.Controllers.Vehiculos;
 using MilesCarRental.Application.Vehiculos.CreateVehiculo;
 using MilesCarRental.Application.Vehiculos.GetVehiculosDisponibles;
 using MilesCarRental.Application.Vehiculos.SearchVehiculos;
@@ -43,8 +44,15 @@ public class VehiculosController : ControllerBase
     }
 
     [HttpGet("disponibles")]
-    public async Task<IActionResult> GetVehiculosDisponiblesPorLocalidad([FromQuery] GetVehiculosDisponiblesQuery query, CancellationToken cancellationToken)
+    public async Task<IActionResult> GetVehiculosDisponiblesPorLocalidad([FromQuery] GetVehiculosDisponiblesRequest request, CancellationToken cancellationToken)
     {
+        var query = new GetVehiculosDisponiblesQuery(
+            request.LocalidadRecogidaId,
+            request.LocalidadDevolucionId,
+            request.LocalidadClienteId,
+            request.FechaInicio,
+            request.FechaFin
+        );
         var result = await _sender.Send(query, cancellationToken);
         if (result.IsFailure)
         {

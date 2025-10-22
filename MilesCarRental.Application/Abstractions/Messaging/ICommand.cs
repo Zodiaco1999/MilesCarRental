@@ -3,11 +3,11 @@ using MediatR;
 
 namespace MilesCarRental.Application.Abstractions.Messaging;
 
-public interface ICommand : IRequest<Result>, IBaseCommand
+public interface ICommand : IRequest<Result>, IBaseRequest
 {
 }
 
-public interface ICommand<TResponse> : IRequest<Result<TResponse>>, IBaseCommand
+public interface ICommand<TResponse> : IRequest<Result<TResponse>>, IBaseRequest
 {
 }
 

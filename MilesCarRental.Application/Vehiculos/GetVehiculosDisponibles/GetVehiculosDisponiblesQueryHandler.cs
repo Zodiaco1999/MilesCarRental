@@ -1,9 +1,7 @@
 ﻿using Dapper;
 using MilesCarRental.Application.Abstractions.Data;
 using MilesCarRental.Application.Abstractions.Messaging;
-using MilesCarRental.Application.Exceptions;
 using MilesCarRental.Domain.Abstractions;
-using MilesCarRental.Domain.Vehiculos;
 using System.Data;
 
 namespace MilesCarRental.Application.Vehiculos.GetVehiculosDisponibles;
@@ -19,11 +17,6 @@ internal sealed class GetVehiculosDisponiblesQueryHandler : IQueryHandler<GetVeh
 
     public async Task<Result<IReadOnlyList<VehiculoDisponibleResponse>>> Handle(GetVehiculosDisponiblesQuery request, CancellationToken cancellationToken)
     {
-        if (request.LocalidadRecogidaId == Guid.Empty)
-        {
-            return Result.Failure<IReadOnlyList<VehiculoDisponibleResponse>>(VehiculoErrors.LocalidadRecogida);
-        }
-
         using var connection = _sqlConnectionFactory.CreateConnection();
 
         const string sql = """
@@ -51,9 +44,11 @@ internal sealed class GetVehiculosDisponiblesQueryHandler : IQueryHandler<GetVeh
         WHERE dv.localidad_recogida_id = @LocalidadRecogidaId
           AND (@LocalidadDevolucionId IS NULL OR dv.localidad_devolucion_id = @LocalidadDevolucionId)
           AND (@MercadoId IS NULL OR m.id = @MercadoId)
-          AND (@FechaInicio IS NULL OR dv.fecha_inicio <= @FechaInicio)
-          AND (@FechaFin IS NULL OR dv.fecha_fin >= @FechaFin)
-          AND CURRENT_DATE BETWEEN dv.fecha_inicio::date AND dv.fecha_fin::date
+          AND (
+              (@FechaInicio IS NULL AND @FechaFin IS NULL AND CURRENT_DATE BETWEEN dv.fecha_inicio::date AND dv.fecha_fin::date)
+              OR 
+              (dv.fecha_inicio::date <= @FechaInicio AND dv.fecha_fin::date >= @FechaFin)
+          )
           AND dv.disponible = TRUE
         ORDER BY v.modelo;
         """;
@@ -61,9 +56,9 @@ internal sealed class GetVehiculosDisponiblesQueryHandler : IQueryHandler<GetVeh
         var parameters = new DynamicParameters();
         parameters.Add("LocalidadRecogidaId", request.LocalidadRecogidaId, DbType.Guid);
         parameters.Add("LocalidadDevolucionId", request.LocalidadDevolucionId, DbType.Guid);
-        parameters.Add("MercadoId", request.MercadoId, DbType.Guid);
-        parameters.Add("FechaInicio", request.FechaInicio, DbType.DateTime);
-        parameters.Add("FechaFin", request.FechaFin, DbType.DateTime);
+        parameters.Add("MercadoId", request.LocalidadClienteId, DbType.Guid);
+        parameters.Add("FechaInicio", request.FechaInicio, DbType.Date);
+        parameters.Add("FechaFin", request.FechaFin, DbType.Date);
 
         var vehiculos = await connection.QueryAsync<VehiculoDisponibleResponse>(
             sql,

@@ -19,7 +19,6 @@ internal sealed class LocalidadConfiguration : IEntityTypeConfiguration<Localida
         {
             direccionBuilder.Property(d => d.Pais).HasColumnName("pais").HasMaxLength(100);
             direccionBuilder.Property(d => d.Departamento).HasColumnName("departamento").HasMaxLength(100);
-            direccionBuilder.Property(d => d.Provincia).HasColumnName("provincia").HasMaxLength(100);
             direccionBuilder.Property(d => d.Ciudad).HasColumnName("ciudad").HasMaxLength(100);
             direccionBuilder.Property(d => d.Calle).HasColumnName("calle").HasMaxLength(200);
         });

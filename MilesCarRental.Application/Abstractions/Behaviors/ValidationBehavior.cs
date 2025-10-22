@@ -1,12 +1,11 @@
-﻿using MilesCarRental.Application.Abstractions.Messaging;
-using MilesCarRental.Application.Exceptions;
-using FluentValidation;
+﻿using FluentValidation;
 using MediatR;
+using MilesCarRental.Application.Exceptions;
 
 namespace MilesCarRental.Application.Abstractions.Behaviors;
 
 public class ValidationBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
-    where TRequest : IBaseCommand
+    where TRequest : Messaging.IBaseRequest
 {
     private readonly IEnumerable<IValidator<TRequest>> _validators;
 
@@ -20,7 +19,7 @@ public class ValidationBehavior<TRequest, TResponse> : IPipelineBehavior<TReques
         if (!_validators.Any())
         {
             return await next();
-            
+
         }
 
         var context = new ValidationContext<TRequest>(request);
@@ -30,15 +29,15 @@ public class ValidationBehavior<TRequest, TResponse> : IPipelineBehavior<TReques
             .Where(validationResult => validationResult.Errors.Any())
             .SelectMany(validationResult => validationResult.Errors)
             .Select(validationFailure => new ValidationError(
-                validationFailure.PropertyName, 
+                validationFailure.PropertyName,
                 validationFailure.ErrorMessage)
             ).ToList();
 
         if (validationErrors.Any())
         {
-           throw new Exceptions.ValidationException(validationErrors);
+            throw new Exceptions.ValidationException(validationErrors);
         }
 
         return await next();
     }
-} 
+}
