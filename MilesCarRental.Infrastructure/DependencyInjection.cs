@@ -1,4 +1,8 @@
-﻿using MilesCarRental.Application.Abstractions.Clock;
+﻿using Dapper;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using MilesCarRental.Application.Abstractions.Clock;
 using MilesCarRental.Application.Abstractions.Data;
 using MilesCarRental.Application.Abstractions.Email;
 using MilesCarRental.Domain.Abstractions;
@@ -9,10 +13,7 @@ using MilesCarRental.Infrastructure.Clock;
 using MilesCarRental.Infrastructure.Data;
 using MilesCarRental.Infrastructure.Email;
 using MilesCarRental.Infrastructure.Repositories;
-using Dapper;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
+using MilesCarRental.Infrastructure.Security;
 
 namespace MilesCarRental.Infrastructure;
 
@@ -25,9 +26,12 @@ public static class DependencyInjection
     {
         services.AddTransient<IDateTimeProvider, DateTimeProvider>();
         services.AddTransient<IEmailService, EmailService>();
+        var encryptionHelper = new EncryptionHelper(configuration);
 
-        var connectionString = configuration.GetConnectionString("Database")
+        var rawConnectionString = configuration.GetConnectionString("Database")
              ?? throw new ArgumentNullException(nameof(configuration));
+
+        var connectionString = encryptionHelper.Decrypt(rawConnectionString);
 
         services.AddDbContext<ApplicationDbContext>(options => {
             options.UseNpgsql(connectionString).UseSnakeCaseNamingConvention();

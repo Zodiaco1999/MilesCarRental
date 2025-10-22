@@ -3,7 +3,6 @@ using Microsoft.EntityFrameworkCore;
 
 namespace MilesCarRental.Infrastructure.Repositories;
 
-
 internal abstract class Repository<T>
 where T : Entity
 {
